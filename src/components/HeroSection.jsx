@@ -193,14 +193,16 @@ export default function HeroSection() {
     /* ==========================================
        HORIZON GRID (Disabled on mobile)
        ========================================== */
-    let gridPlane; // Declare gridPlane outside the if block if it's referenced later
+    let gridPlane = null; 
+    let gridMaterial = null;
+    
     if (!isMobile) {
       const gridUniforms = {
         uColor: { value: new THREE.Color(0xffffff) },
         uOpacity: { value: 0.0 }
       };
 
-      const gridMaterial = new THREE.ShaderMaterial({
+      gridMaterial = new THREE.ShaderMaterial({
         uniforms: gridUniforms,
         vertexShader: `
           varying vec3 vWorldPosition;
