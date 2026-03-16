@@ -338,8 +338,10 @@ export default function HeroSection() {
         -20 - scrollP * 30
       );
 
-      gridPlane.position.x = camera.position.x;
-      gridPlane.position.z = camera.position.z;
+      if (gridPlane) {
+        gridPlane.position.x = camera.position.x;
+        gridPlane.position.z = camera.position.z;
+      }
       
       bhMesh.lookAt(camera.position);
 
