@@ -27,6 +27,7 @@ export default function SkillsCarousel() {
       <div className="relative flex overflow-hidden">
         <motion.div
           className="flex whitespace-nowrap gap-12 md:gap-20 items-center"
+          style={{ willChange: "transform" }}
           animate={{
             x: ["0%", "-33.33%"],
           }}
@@ -34,7 +35,7 @@ export default function SkillsCarousel() {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 20,
+              duration: window.innerWidth < 768 ? 30 : 20,
               ease: "linear",
             },
           }}
@@ -42,7 +43,7 @@ export default function SkillsCarousel() {
           {displayLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center grayscale brightness-200 opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              className="flex-shrink-0 flex items-center justify-center grayscale brightness-200 opacity-30 md:hover:grayscale-0 md:hover:opacity-100 transition-opacity duration-500"
             >
               <img
                 src={logo}

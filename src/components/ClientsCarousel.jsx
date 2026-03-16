@@ -28,6 +28,7 @@ export default function ClientsCarousel() {
       <div className="relative flex overflow-hidden">
         <motion.div
           className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
+          style={{ willChange: "transform" }}
           animate={{
             x: ["0%", "-50%"],
           }}
@@ -35,7 +36,7 @@ export default function ClientsCarousel() {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 25,
+              duration: window.innerWidth < 768 ? 35 : 25,
               ease: "linear",
             },
           }}
@@ -43,7 +44,7 @@ export default function ClientsCarousel() {
           {displayLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center grayscale brightness-200 opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              className="flex-shrink-0 flex items-center justify-center grayscale brightness-200 opacity-40 md:hover:grayscale-0 md:hover:opacity-100 transition-opacity duration-500"
             >
               <img
                 src={logo}
