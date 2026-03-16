@@ -136,17 +136,17 @@ export default function HeroSection() {
     scene.add(bhMesh);
 
     /* ==========================================
-       INTERACTIVE VOLUMETRIC FOG
+       VOLUMETRIC FOG (Planes)
        ========================================== */
     const smokeCanvas = document.createElement('canvas');
     smokeCanvas.width = 512;
     smokeCanvas.height = 512;
     const ctx = smokeCanvas.getContext('2d');
-    const gradient = ctx.createRadialGradient(256, 256, 0, 256, 256, 256);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.18)');
-    gradient.addColorStop(0.4, 'rgba(255, 255, 255, 0.05)');
-    gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
-    ctx.fillStyle = gradient;
+    const grad = ctx.createRadialGradient(256, 256, 0, 256, 256, 256);
+    grad.addColorStop(0, 'rgba(255, 255, 255, 0.2)');
+    grad.addColorStop(0.5, 'rgba(128, 128, 128, 0.05)');
+    grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.fillStyle = grad;
     ctx.fillRect(0, 0, 512, 512);
     const smokeTex = new THREE.CanvasTexture(smokeCanvas);
 
@@ -164,7 +164,7 @@ export default function HeroSection() {
           map: smokeTex,
           color: color,
           transparent: true,
-          opacity: Math.random() * 0.5 + 0.1,
+          opacity: Math.random() * 0.4 + 0.1,
           depthWrite: false,
           blending: THREE.NormalBlending
       });
@@ -177,9 +177,9 @@ export default function HeroSection() {
       );
       plane.rotation.z = Math.random() * Math.PI * 2;
       plane.userData = {
-          rotSpeed: (Math.random() - 0.5) * 0.002,
-          driftX: (Math.random() - 0.5) * 0.015,
-          driftY: (Math.random() - 0.5) * 0.01,
+          rotSpeed: (Math.random() - 0.5) * 0.001,
+          driftX: (Math.random() - 0.5) * 0.01,
+          driftY: (Math.random() - 0.5) * 0.005,
           baseOpacity: smokeMat.opacity,
           phaseOffset: Math.random() * Math.PI * 2,
           baseX: plane.position.x,
@@ -191,50 +191,53 @@ export default function HeroSection() {
     }
 
     /* ==========================================
-       HORIZON GRID
+       HORIZON GRID (Disabled on mobile)
        ========================================== */
-    const gridUniforms = {
-      uColor: { value: new THREE.Color(0xffffff) },
-      uOpacity: { value: 0.0 }
-    };
+    let gridPlane; // Declare gridPlane outside the if block if it's referenced later
+    if (!isMobile) {
+      const gridUniforms = {
+        uColor: { value: new THREE.Color(0xffffff) },
+        uOpacity: { value: 0.0 }
+      };
 
-    const gridMaterial = new THREE.ShaderMaterial({
-      uniforms: gridUniforms,
-      vertexShader: `
-        varying vec3 vWorldPosition;
-        void main() {
-          vec4 worldPosition = modelMatrix * vec4(position, 1.0);
-          vWorldPosition = worldPosition.xyz;
-          gl_Position = projectionMatrix * viewMatrix * worldPosition;
-        }
-      `,
-      fragmentShader: `
-        uniform vec3 uColor;
-        uniform float uOpacity;
-        varying vec3 vWorldPosition;
+      const gridMaterial = new THREE.ShaderMaterial({
+        uniforms: gridUniforms,
+        vertexShader: `
+          varying vec3 vWorldPosition;
+          void main() {
+            vec4 worldPosition = modelMatrix * vec4(position, 1.0);
+            vWorldPosition = worldPosition.xyz;
+            gl_Position = projectionMatrix * viewMatrix * worldPosition;
+          }
+        `,
+        fragmentShader: `
+          uniform vec3 uColor;
+          uniform float uOpacity;
+          varying vec3 vWorldPosition;
 
-        void main() {
-          vec2 coord = vWorldPosition.xz * 0.55;
-          vec2 grid = abs(fract(coord - 0.5) - 0.5) / (fwidth(coord) * 1.6);
-          float line = min(grid.x, grid.y);
-          float alpha = max(0.0, 1.0 - line);
+          void main() {
+            vec2 coord = vWorldPosition.xz * 0.55;
+            vec2 grid = abs(fract(coord - 0.5) - 0.5) / (fwidth(coord) * 1.6);
+            float line = min(grid.x, grid.y);
+            float alpha = max(0.0, 1.0 - line);
 
-          float dist = length(vWorldPosition.xyz - cameraPosition);
-          float fade = 1.0 - smoothstep(12.0, 70.0, dist);
+            float dist = length(vWorldPosition.xyz - cameraPosition);
+            float fade = 1.0 - smoothstep(12.0, 70.0, dist);
 
-          gl_FragColor = vec4(uColor, alpha * fade * uOpacity);
-        }
-      `,
-      transparent: true,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false,
-    });
+            gl_FragColor = vec4(uColor, alpha * fade * uOpacity);
+          }
+        `,
+        transparent: true,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+      });
 
-    const planeGeo = new THREE.PlaneGeometry(240, 240);
-    planeGeo.rotateX(-Math.PI / 2);
-    const gridPlane = new THREE.Mesh(planeGeo, gridMaterial);
-    gridPlane.position.y = -4;
-    scene.add(gridPlane);
+      const planeGeo = new THREE.PlaneGeometry(240, 240);
+      planeGeo.rotateX(-Math.PI / 2);
+      gridPlane = new THREE.Mesh(planeGeo, gridMaterial);
+      gridPlane.position.y = -4;
+      scene.add(gridPlane);
+    }
 
     /* ==========================================
        PARTICLE FIELD
@@ -244,16 +247,16 @@ export default function HeroSection() {
     const vels =[];
     for(let i=0; i<particleCount; i++) {
       pts.push((Math.random()-.5)*150, (Math.random()-.5)*80 + 5, (Math.random()-.5)*100 - 15);
-      vels.push(Math.random() * 0.015 + 0.005);
+      vels.push(Math.random() * 0.01 + 0.005);
     }
     pGeo.setAttribute("position", new THREE.Float32BufferAttribute(pts, 3));
     pGeo.setAttribute("aSpeed", new THREE.Float32BufferAttribute(vels, 1));
 
     const pMat = new THREE.PointsMaterial({
       color: 0xc7d2fe, // brighter violet-white
-      size: 0.02,
+      size: isMobile ? 0.04 : 0.02,
       transparent: true,
-      opacity: 0.3,
+      opacity: 0.25,
       blending: THREE.AdditiveBlending,
       depthWrite: false
     });
@@ -307,8 +310,10 @@ export default function HeroSection() {
       mouseX += (targetX - mouseX) * 0.05;
       mouseY += (targetY - mouseY) * 0.05;
 
-      const targetGridOpacity = 0.06 * (1.0 - scrollP);
-      gridMaterial.uniforms.uOpacity.value += (targetGridOpacity - gridMaterial.uniforms.uOpacity.value) * 0.05;
+      if (!isMobile && gridMaterial) {
+        const targetGridOpacity = 0.06 * (1.0 - scrollP);
+        gridMaterial.uniforms.uOpacity.value += (targetGridOpacity - gridMaterial.uniforms.uOpacity.value) * 0.05;
+      }
 
       scrollP += (targetScrollP - scrollP) * 0.04;
       bhUniforms.uScroll.value = scrollP;
