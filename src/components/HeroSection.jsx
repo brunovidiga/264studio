@@ -498,8 +498,8 @@ export default function HeroSection() {
           <div className="hero-fog"></div>
 
           {/* HERO TEXT */}
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 hero-content text-center relative z-20 pt-20 sm:pt-24 md:pt-28" style={{ pointerEvents: 'auto' }}>
-            <div className="inline-flex items-center gap-3 rounded-full className='tactile-glass' px-3 py-1.5 text-xs text-[#b7ab98] mb-8 shadow-2xl tactile-glass">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 hero-content text-center relative z-20 pt-36 sm:pt-40 md:pt-28" style={{ pointerEvents: 'auto' }}>
+            <div className="inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs text-[#b7ab98] mb-8 shadow-2xl tactile-glass border border-white/5">
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#cf6701] shadow-[0_0_8px_rgba(207,103,1,1)]"></span>
               O Futuro da Comunicação & Marketing
             </div>
