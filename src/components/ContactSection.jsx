@@ -13,7 +13,7 @@ export default function ContactSection() {
     setStatus('sending');
     
     try {
-      const response = await fetch("https://formspree.io/f/xvgzbgzl", { // Note: xvgzbgzl is a placeholder ID that maps to the requested email initially
+      const response = await fetch("https://formspree.io/f/maqppzer", { 
         method: 'POST',
         body: data,
         headers: {
