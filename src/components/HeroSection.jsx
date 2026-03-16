@@ -15,8 +15,18 @@ export default function HeroSection() {
     const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
     camera.position.set(0, 8, 20);
 
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha:true, antialias:true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const isMobile = window.innerWidth < 768;
+    const smokeCount = isMobile ? 12 : 40;
+    const particleCount = isMobile ? 200 : 600;
+
+    const renderer = new THREE.WebGLRenderer({ 
+      canvas, 
+      antialias: !isMobile,
+      alpha: true, 
+      powerPreference: "high-performance" 
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(isMobile ? Math.min(window.devicePixelRatio, 1.5) : Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     /* ==========================================
@@ -143,7 +153,7 @@ export default function HeroSection() {
     const smokePlanes = [];
     const smokeGeo = new THREE.PlaneGeometry(100, 100);
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < smokeCount; i++) {
       let color = new THREE.Color();
       let rand = Math.random();
       if(rand < 0.4) color.setHex(0x1a153a);      // violet plasma
@@ -232,7 +242,7 @@ export default function HeroSection() {
     const pGeo = new THREE.BufferGeometry();
     const pts = [];
     const vels =[];
-    for(let i=0; i<600; i++) {
+    for(let i=0; i<particleCount; i++) {
       pts.push((Math.random()-.5)*150, (Math.random()-.5)*80 + 5, (Math.random()-.5)*100 - 15);
       vels.push(Math.random() * 0.015 + 0.005);
     }
