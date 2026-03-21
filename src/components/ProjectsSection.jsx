@@ -4,7 +4,7 @@ import mosaicImg from '../assets/projects-mosaic.png';
 
 export default function ProjectsSection() {
   return (
-    <section id="projetos" className="pt-0 pb-0 bg-black overflow-hidden">
+    <section id="projetos" className="pt-20 pb-12 sm:pt-0 sm:pb-0 bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Centralized Title */}
@@ -13,7 +13,7 @@ export default function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center mb-4 hidden sm:block"
+          className="max-w-4xl mx-auto text-center mb-12 sm:mb-4"
         >
           <h2 
             className="text-xs md:text-sm lg:text-base uppercase tracking-[0.3em] font-extralight text-zinc-300 leading-relaxed md:leading-loose"
@@ -32,9 +32,9 @@ export default function ProjectsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative hidden sm:flex justify-center"
+          className="relative flex justify-center"
         >
-          <div className="relative w-full max-w-5xl rounded-[2rem] overflow-hidden">
+          <div className="relative w-full max-w-5xl scale-110 sm:scale-100 rounded-[2rem] overflow-hidden">
             <img 
               src={mosaicImg} 
               alt="Mosaico de Projetos Insynk Studio" 
