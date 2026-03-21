@@ -12,7 +12,7 @@ export default function BudgetCTA() {
             <img 
               src={grndImage2} 
               alt="Soluções Insynk Studio" 
-              className="w-full h-full object-cover opacity-50"
+              className="w-full h-full object-cover object-top opacity-50"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
           </div>
