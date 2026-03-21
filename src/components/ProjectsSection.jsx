@@ -13,7 +13,7 @@ export default function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center mb-4"
+          className="max-w-4xl mx-auto text-center mb-4 hidden sm:block"
         >
           <h2 
             className="text-xs md:text-sm lg:text-base uppercase tracking-[0.3em] font-extralight text-zinc-300 leading-relaxed md:leading-loose"
