@@ -18,7 +18,7 @@ export default function ClientsCarousel() {
   const displayLogos = [...logos, ...logos];
 
   return (
-    <section className="pt-0 pb-12 bg-black overflow-hidden border-t border-white/5">
+    <section className="pt-0 pb-20 sm:pb-12 bg-black overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 mb-8">
         <p className="text-zinc-500 text-center text-xs uppercase tracking-[0.3em] font-medium opacity-80">
           Empresas que confiam no nosso trabalho
