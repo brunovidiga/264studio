@@ -32,9 +32,9 @@ export default function ProjectsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative flex justify-center -mt-16 sm:mt-0"
+          className="relative hidden sm:flex justify-center"
         >
-          <div className="relative w-full max-w-5xl scale-110 sm:scale-100 rounded-[2rem] overflow-hidden">
+          <div className="relative w-full max-w-5xl rounded-[2rem] overflow-hidden">
             <img 
               src={mosaicImg} 
               alt="Mosaico de Projetos Insynk Studio" 
