@@ -5,7 +5,7 @@ import { Target, Cpu, Sparkles, Users, Zap, Video } from 'lucide-react';
 const services = [
   {
     title: "Tráfego Pago (Google Ads & Meta Ads)",
-    description: "Gestão completa de campanhas em Google Ads e Meta Ads em Niterói para geração de leads e aumento de vendas com IA.",
+    description: "Gestão completa de campanhas em Google Ads e Meta Ads para geração de leads e aumento de vendas com IA.",
     icon: Target
   },
   {
