@@ -524,8 +524,8 @@ export default function HeroSection() {
             </div>
           
             <h1 className="mx-auto max-w-5xl text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-[#b7ab98] leading-[1.1] drop-shadow-[0_10px_40px_rgba(0,0,0,0.7)]">
-              <span className="block">Studio criativo e Agência de</span>
-              <span className="block mt-2 font-black text-[#b7ab98] pb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>Marketing Digital em Niterói</span>
+              <span className="block">Um Studio Criativo</span>
+              <span className="block mt-2 font-black text-[#b7ab98] pb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>que gera resultados</span>
             </h1>
           
             <p className="mx-auto mt-8 text-base sm:text-lg text-[#b7ab98]/80 max-w-2xl uppercase tracking-widest font-medium">
