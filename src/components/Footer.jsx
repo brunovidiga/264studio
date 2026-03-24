@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-zinc-500 text-xs tracking-[0.2em] uppercase">
-              © 2026 Insynk Studio | Agência de Marketing em Niterói. Todos os direitos reservados.
+              © 2026 Insynk Studio | Studio Criativo em Niterói. Todos os direitos reservados.
             </p>
           </div>
 
