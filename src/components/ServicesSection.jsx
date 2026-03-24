@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "Branding Estratégico",
-    description: "Posicionamento e branding para empresas em Niterói, unindo estética e performance para valorizar sua marca.",
+    description: "Posicionamento e branding para empresas, unindo estética e performance para valorizar sua marca.",
     icon: Sparkles
   },
   {
