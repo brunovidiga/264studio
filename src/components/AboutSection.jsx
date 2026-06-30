@@ -43,7 +43,7 @@ export default function AboutSection() {
               <img 
                 src={aboutImg} 
                 alt="Equipe Insynk Studio" 
-                className="w-full h-auto object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
             </div>

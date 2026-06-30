@@ -73,7 +73,7 @@ function IPhoneMockup({ image }) {
               <img 
                 src={image} 
                 alt="Projetos Insynk Studio"
-                className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 ease-out"
+                className="w-full h-full object-contain transition-all duration-700 ease-out"
               />
               {/* Overlay to handle hover state for B&W to Color specifically if CSS filter class isn't enough */}
             </div>
