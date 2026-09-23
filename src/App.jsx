@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import PhoneGallery from './components/PhoneGallery'
@@ -18,6 +19,19 @@ import SkillsCarousel from './components/SkillsCarousel'
 
 
 function App() {
+  useEffect(() => {
+    const blockMenu = (e) => e.preventDefault()
+    const blockDrag = (e) => {
+      if (e.target instanceof HTMLImageElement || e.target instanceof HTMLVideoElement) e.preventDefault()
+    }
+    document.addEventListener('contextmenu', blockMenu)
+    document.addEventListener('dragstart', blockDrag)
+    return () => {
+      document.removeEventListener('contextmenu', blockMenu)
+      document.removeEventListener('dragstart', blockDrag)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#cf6701] selection:text-black">
       <Header />
