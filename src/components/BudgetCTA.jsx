@@ -5,13 +5,38 @@ import grndImage2 from '../assets/grnd2.webp';
 export default function BudgetCTA() {
   return (
     <section className="py-20 bg-black relative overflow-hidden">
+      <style>{`
+        @keyframes beamSpin {
+          to { transform: rotate(360deg); }
+        }
+        .pill-beam {
+          position: relative;
+          border-radius: 9999px;
+          padding: 1px;
+          overflow: hidden;
+          isolation: isolate;
+        }
+        .pill-beam::before {
+          content: '';
+          position: absolute;
+          inset: -60%;
+          background: conic-gradient(from 0deg, transparent 0%, transparent 68%, rgba(207,103,1,0.4) 78%, #cf6701 86%, #ffe3bb 91%, #cf6701 96%, transparent 100%);
+          animation: beamSpin 3.2s linear infinite;
+          animation-delay: var(--beam-delay, 0s);
+          z-index: 0;
+        }
+        .pill-beam > div {
+          position: relative;
+          z-index: 1;
+        }
+      `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-[3rem] overflow-hidden bg-zinc-950 border border-white/5">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0">
             <img 
               src={grndImage2} 
-              alt="Soluções Insynk Studio" 
+              alt="Soluções 264 Studio" 
               className="w-full h-full object-cover object-top opacity-50"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
@@ -33,8 +58,8 @@ export default function BudgetCTA() {
               </h2>
               
               <h3 
-                className="text-3xl md:text-5xl lg:text-5xl font-normal text-white leading-[1.2] mb-8"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
+                className="text-3xl md:text-5xl lg:text-5xl text-white leading-[1.2] mb-8"
+                style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
               >
                 Independente do seu orçamento, temos <span className="text-[#cf6701]">soluções personalizadas</span> para seu projeto.
               </h3>
@@ -44,15 +69,13 @@ export default function BudgetCTA() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                 <div className="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/5 backdrop-blur-md text-zinc-400 text-sm uppercase tracking-widest font-medium">
-                    Velocidade
-                 </div>
-                 <div className="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/5 backdrop-blur-md text-zinc-400 text-sm uppercase tracking-widest font-medium">
-                    Precisão
-                 </div>
-                 <div className="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/5 backdrop-blur-md text-zinc-400 text-sm uppercase tracking-widest font-medium">
-                    Personalização
-                 </div>
+                 {['Velocidade', 'Precisão', 'Personalização'].map((label, i) => (
+                   <div key={label} className="pill-beam" style={{ '--beam-delay': `${i * 1.05}s`, filter: 'drop-shadow(0 0 6px rgba(207,103,1,0.35))' }}>
+                     <div className="px-6 py-3 rounded-full bg-zinc-900/90 backdrop-blur-md text-zinc-300 text-sm uppercase tracking-widest font-medium">
+                       {label}
+                     </div>
+                   </div>
+                 ))}
               </div>
             </motion.div>
           </div>

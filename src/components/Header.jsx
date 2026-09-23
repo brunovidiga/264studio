@@ -18,7 +18,7 @@ export default function Header() {
         
         {/* Logo */}
         <div className="flex items-center gap-3 relative z-50">
-           <img src={logo} alt="Insynk Studio" className="h-[60px] w-auto object-contain" />
+           <img src={logo} alt="264 Studio" className="h-[60px] w-auto object-contain" />
         </div>
 
       </div>

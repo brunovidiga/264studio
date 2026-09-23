@@ -17,8 +17,8 @@ export default function AboutSection() {
             className="flex-1 text-left"
           >
             <h2 
-              className="text-3xl md:text-4xl font-semibold text-white mb-6 leading-tight"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+              className="text-3xl md:text-4xl text-white mb-6 leading-tight uppercase"
+              style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
             >
               Design Thinking para entender. <br />
               <span className="text-[#b7ab98]">IA para acelerar.</span>
@@ -42,7 +42,7 @@ export default function AboutSection() {
             <div className="relative rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.05)] border border-white/10 group">
               <img 
                 src={aboutImg} 
-                alt="Equipe Insynk Studio" 
+                alt="Equipe 264 Studio" 
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />

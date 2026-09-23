@@ -15,14 +15,14 @@ export default function StatementSection() {
           <h2 
             className="text-white leading-[1.2] tracking-tight"
             style={{ 
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Anton', sans-serif",
               fontSize: '48px',
-              fontWeight: 300
+              fontWeight: 400
             }}
           >
-            Insynk Studio é um laboratório criativo que combina{' '}
-            <span style={{ color: '#B7AB98' }}>Design Thinking e Inteligência Artificial </span>
-            para transformar comunicação em ativo estratégico.
+            Somos um laboratório onde{' '}
+            <span style={{ color: '#B7AB98' }}>criatividade humana e super inteligência </span>
+            se encontram para transformar ideias em realidade.
           </h2>
         </motion.div>
       </div>

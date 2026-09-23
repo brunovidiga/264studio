@@ -5,9 +5,10 @@ import BudgetCTA from './components/BudgetCTA'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import VideoSection from './components/VideoSection'
+import ManifestoSection from './components/ManifestoSection'
 import StatementSection from './components/StatementSection'
 import AboutSection from './components/AboutSection'
-import ServicesSection from './components/ServicesSection'
+import ServicesStack from './components/ServicesStack'
 import ClientsCarousel from './components/ClientsCarousel'
 import ProjectsSection from './components/ProjectsSection'
 import TargetAudienceSection from './components/TargetAudienceSection'
@@ -22,9 +23,10 @@ function App() {
       <Header />
       <HeroSection />
       <VideoSection />
+      <ManifestoSection />
       <StatementSection />
       <AboutSection />
-      <ServicesSection />
+      <ServicesStack />
       <ClientsCarousel />
       <ProjectsSection />
       <TargetAudienceSection />

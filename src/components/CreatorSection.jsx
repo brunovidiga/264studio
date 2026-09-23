@@ -22,7 +22,7 @@ export default function CreatorSection() {
             <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
               <img 
                 src={brunoImg} 
-                alt="Bruno Vidal - Criador da Insynk Studio" 
+                alt="Bruno Vidal - Criador da 264 Studio" 
                 className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
@@ -58,7 +58,7 @@ export default function CreatorSection() {
                   className="text-2xl md:text-3xl font-light text-white leading-tight"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
-                  Criador da Insynk Studio
+                  Criador da 264 Studio
                 </h3>
               </div>
 
@@ -73,7 +73,7 @@ export default function CreatorSection() {
                   Ao longo do caminho ganhei profunda experiência em marketing de produtos, análise de mercado, branding e comunicação corporativa.
                 </p>
                 <p className="text-zinc-300">
-                  Atualmente, sou responsável pela <span className="text-[#cf6701]">Insynk Studio</span>. Nosso trabalho envolve estudos e pesquisas constantes para apoiar empresas a superarem seus próprios limites e atingirem os melhores resultados.
+                  Atualmente, sou responsável pela <span className="text-[#cf6701]">264 Studio</span>. Nosso trabalho envolve estudos e pesquisas constantes para apoiar empresas a superarem seus próprios limites e atingirem os melhores resultados.
                 </p>
               </div>
 

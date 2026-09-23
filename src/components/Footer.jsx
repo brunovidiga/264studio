@@ -9,13 +9,13 @@ export default function Footer() {
           
           {/* Logo */}
           <div className="opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src={logo} alt="Insynk Studio" className="h-[50px] w-auto object-contain" />
+            <img src={logo} alt="264 Studio" className="h-[50px] w-auto object-contain" />
           </div>
 
           {/* Copyright */}
           <div className="text-center">
             <p className="text-zinc-500 text-xs tracking-[0.2em] uppercase">
-              © 2026 Insynk Studio | Studio Criativo em Niterói. Todos os direitos reservados.
+              © 2026 264 Studio | Studio Criativo em Niterói. Todos os direitos reservados.
             </p>
           </div>
 

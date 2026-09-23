@@ -13,7 +13,7 @@ export default function ContactSection() {
     setStatus('sending');
     
     try {
-      const response = await fetch("https://formspree.io/f/maqppzer", { 
+      const response = await fetch("https://formsubmit.co/ajax/264studiodigital@gmail.com", {
         method: 'POST',
         body: data,
         headers: {
@@ -55,8 +55,8 @@ export default function ContactSection() {
               VAMOS CONVERSAR
             </h2>
             <h3 
-              className="text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-[1.1] mb-8"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+              className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-8"
+              style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
             >
               O futuro da sua marca começa com uma <span className="text-[#cf6701]">conversa.</span>
             </h3>
@@ -71,7 +71,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                         <p className="text-xs text-zinc-500 uppercase tracking-widest">E-mail Direto</p>
-                        <p className="text-white font-medium">insynkstudiorj@gmail.com</p>
+                        <p className="text-white font-medium">264studiodigital@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -168,8 +168,9 @@ export default function ContactSection() {
                         <p className="text-red-500 text-sm text-center">Ocorreu um erro ao enviar. Tente novamente.</p>
                     )}
 
-                    <input type="hidden" name="_subject" value="Novo Contato - Insynk Studio Site" />
-                    <input type="hidden" name="_replyto" value="insynkstudiorj@gmail.com" />
+                    <input type="hidden" name="_subject" value="Novo Contato - 264 Studio Site" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
                   </form>
                 )}
             </div>

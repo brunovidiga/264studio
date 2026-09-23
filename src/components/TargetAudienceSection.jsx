@@ -50,7 +50,7 @@ export default function TargetAudienceSection() {
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               <span className="w-12 h-px bg-[#b7ab98]/30"></span>
-              Para quem é a Insynk Studio
+              Para quem é a 264 Studio
             </h2>
 
             <div className="space-y-6">

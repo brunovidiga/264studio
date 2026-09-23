@@ -37,7 +37,7 @@ export default function ProjectsSection() {
           <div className="relative w-full max-w-5xl scale-110 sm:scale-100 rounded-[2rem] overflow-hidden">
             <img 
               src={mosaicImg} 
-              alt="Mosaico de Projetos Insynk Studio" 
+              alt="Mosaico de Projetos 264 Studio" 
               className="w-full h-auto object-contain"
             />
             

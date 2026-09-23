@@ -523,9 +523,9 @@ export default function HeroSection() {
               O Futuro da Comunicação & Marketing
             </div>
           
-            <h1 className="mx-auto max-w-5xl text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-[#b7ab98] leading-[1.1] drop-shadow-[0_10px_40px_rgba(0,0,0,0.7)]">
-              <span className="block">Um Studio Criativo</span>
-              <span className="block mt-2 font-black text-[#b7ab98] pb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>que gera resultados</span>
+            <h1 className="mx-auto max-w-5xl text-5xl sm:text-6xl lg:text-7xl tracking-tight text-[#b7ab98] leading-[1.1] drop-shadow-[0_10px_40px_rgba(0,0,0,0.7)] uppercase" style={{ fontFamily: "'Anton', sans-serif" }}>
+              <span className="block font-normal">Um Studio Criativo</span>
+              <span className="block mt-2 font-normal pb-2">que gera resultados</span>
             </h1>
           
             <p className="mx-auto mt-8 text-base sm:text-lg text-[#b7ab98]/80 max-w-2xl uppercase tracking-widest font-medium">
@@ -546,7 +546,7 @@ export default function HeroSection() {
                       <div className="w-3 h-3 rounded-full bg-zinc-800" style={{ animation: 'blinkNode 2s infinite .8s' }}></div>
                     </div>
                     <div className="h-6 px-3 rounded-md tactile-inset flex items-center text-xs text-zinc-500 font-mono tracking-widest border border-zinc-900">
-                      insynk_core_engine
+                      264.studio_engine
                     </div>
                   </div>
                 </div>
