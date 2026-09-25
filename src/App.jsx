@@ -33,7 +33,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-[#cf6701] selection:text-black">
+    <div className="min-h-screen bg-black text-white selection:bg-[#fa6851] selection:text-black">
       <Header />
       <HeroSection />
       <VideoSection />

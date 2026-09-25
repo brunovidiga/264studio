@@ -18,7 +18,7 @@ export default function VideoSection() {
           
           <div className="aspect-video w-full bg-zinc-900 flex items-center justify-center relative overflow-hidden">
             {/* Bolder Fallback Gradient if video fails */}
-            <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-[#cf6701]/5 to-purple-500/10 animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-[#fa6851]/5 to-purple-500/10 animate-pulse" />
 
             <video 
               autoPlay 
@@ -36,7 +36,7 @@ export default function VideoSection() {
       </div>
 
       {/* Background Decorative Element */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#cf6701]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#fa6851]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
     </section>
   );
 }

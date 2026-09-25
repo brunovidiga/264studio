@@ -73,7 +73,7 @@ export default function CreatorSection() {
                   Ao longo do caminho ganhei profunda experiência em marketing de produtos, análise de mercado, branding e comunicação corporativa.
                 </p>
                 <p className="text-zinc-300">
-                  Atualmente, sou responsável pela <span className="text-[#cf6701]">264 Studio</span>. Nosso trabalho envolve estudos e pesquisas constantes para apoiar empresas a superarem seus próprios limites e atingirem os melhores resultados.
+                  Atualmente, sou responsável pela <span className="text-[#fa6851]">264 Studio</span>. Nosso trabalho envolve estudos e pesquisas constantes para apoiar empresas a superarem seus próprios limites e atingirem os melhores resultados.
                 </p>
               </div>
 
@@ -81,7 +81,7 @@ export default function CreatorSection() {
               <div className="pt-8 border-t border-white/5">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full border border-[#b7ab98]/30 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-[#cf6701] animate-pulse" />
+                    <div className="w-2 h-2 rounded-full bg-[#fa6851] animate-pulse" />
                   </div>
                   <p className="text-xs text-[#b7ab98] uppercase tracking-[0.2em]">Ideias que constroem futuro</p>
                 </div>

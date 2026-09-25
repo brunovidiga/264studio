@@ -20,7 +20,7 @@ export default function BudgetCTA() {
           content: '';
           position: absolute;
           inset: -60%;
-          background: conic-gradient(from 0deg, transparent 0%, transparent 68%, rgba(207,103,1,0.4) 78%, #cf6701 86%, #ffe3bb 91%, #cf6701 96%, transparent 100%);
+          background: conic-gradient(from 0deg, transparent 0%, transparent 68%, rgba(250,104,81,0.4) 78%, #fa6851 86%, #ffe3bb 91%, #fa6851 96%, transparent 100%);
           animation: beamSpin 3.2s linear infinite;
           animation-delay: var(--beam-delay, 0s);
           z-index: 0;
@@ -50,10 +50,10 @@ export default function BudgetCTA() {
               viewport={{ once: true }}
             >
               <h2 
-                className="text-[#cf6701] text-sm uppercase tracking-[0.3em] font-medium mb-6 flex items-center gap-4"
+                className="text-[#fa6851] text-sm uppercase tracking-[0.3em] font-medium mb-6 flex items-center gap-4"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
-                <span className="w-12 h-px bg-[#cf6701]/30"></span>
+                <span className="w-12 h-px bg-[#fa6851]/30"></span>
                 SOLUÇÕES SOB MEDIDA
               </h2>
               
@@ -61,16 +61,16 @@ export default function BudgetCTA() {
                 className="text-3xl md:text-5xl lg:text-5xl text-white leading-[1.2] mb-8"
                 style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
               >
-                Independente do seu orçamento, temos <span className="text-[#cf6701]">soluções personalizadas</span> para seu projeto.
+                Independente do seu orçamento, temos <span className="text-[#fa6851]">soluções personalizadas</span> para seu projeto.
               </h3>
               
-              <p className="text-zinc-300 text-lg md:text-xl font-light leading-relaxed mb-10 border-l-2 border-[#cf6701]/40 pl-6">
+              <p className="text-zinc-300 text-lg md:text-xl font-light leading-relaxed mb-10 border-l-2 border-[#fa6851]/40 pl-6">
                 Velocidade e precisão aplicadas estrategicamente para gerar resultados, não importa o tamanho do desafio.
               </p>
 
               <div className="flex flex-wrap gap-4">
                  {['Velocidade', 'Precisão', 'Personalização'].map((label, i) => (
-                   <div key={label} className="pill-beam" style={{ '--beam-delay': `${i * 1.05}s`, filter: 'drop-shadow(0 0 6px rgba(207,103,1,0.35))' }}>
+                   <div key={label} className="pill-beam" style={{ '--beam-delay': `${i * 1.05}s`, filter: 'drop-shadow(0 0 6px rgba(250,104,81,0.35))' }}>
                      <div className="px-6 py-3 rounded-full bg-zinc-900/90 backdrop-blur-md text-zinc-300 text-sm uppercase tracking-widest font-medium">
                        {label}
                      </div>
@@ -81,7 +81,7 @@ export default function BudgetCTA() {
           </div>
 
           {/* Decorative Corner Glow */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#cf6701]/10 blur-[100px] rounded-full pointer-events-none" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#fa6851]/10 blur-[100px] rounded-full pointer-events-none" />
         </div>
       </div>
     </section>

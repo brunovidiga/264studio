@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
 
           {/* Tagline/Small Note */}
-          <div className="w-12 h-px bg-[#cf6701]/30"></div>
+          <div className="w-12 h-px bg-[#fa6851]/30"></div>
           
         </div>
       </div>

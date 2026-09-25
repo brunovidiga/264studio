@@ -24,7 +24,7 @@ export default function TargetAudienceSection() {
             viewport={{ once: true }}
             className="flex-1 relative"
           >
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_rgba(224,114,64,0.1)] border border-white/5">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_rgba(250,104,81,0.1)] border border-white/5">
               <img 
                 src={targetImg} 
                 alt="Target Audience" 
@@ -34,7 +34,7 @@ export default function TargetAudienceSection() {
             </div>
             
             {/* Background Glow */}
-            <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#e07240]/10 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#fa6851]/10 blur-[100px] rounded-full pointer-events-none" />
           </motion.div>
 
           {/* Right Content */}

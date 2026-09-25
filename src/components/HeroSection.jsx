@@ -519,7 +519,7 @@ export default function HeroSection() {
           {/* HERO TEXT */}
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 hero-content text-center relative z-20 pt-36 sm:pt-40 md:pt-28" style={{ pointerEvents: 'auto' }}>
             <div className="inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs text-[#b7ab98] mb-8 shadow-2xl tactile-glass border border-white/5">
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#cf6701] shadow-[0_0_8px_rgba(207,103,1,1)]"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#fa6851] shadow-[0_0_8px_rgba(250,104,81,1)]"></span>
               O Futuro da Comunicação & Marketing
             </div>
           
@@ -561,7 +561,7 @@ export default function HeroSection() {
 
                   <div className="h-2 w-32 tactile-inset rounded-full relative overflow-hidden flex items-center px-1">
                     <div className="h-0.5 w-full bg-zinc-800 rounded-full"></div>
-                    <div className="absolute left-0 h-0.5 w-1/3 bg-[#cf6701] rounded-full shadow-[0_0_10px_#cf6701]"></div>
+                    <div className="absolute left-0 h-0.5 w-1/3 bg-[#fa6851] rounded-full shadow-[0_0_10px_#fa6851]"></div>
                     <div className="absolute top-1/2 -translate-y-1/2 h-1 w-3 bg-white rounded-full shadow-[0_0_8px_#fff]" style={{ animation: 'dataFlow 1.5s linear infinite' }}></div>
                   </div>
 
