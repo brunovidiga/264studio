@@ -21,7 +21,7 @@ export default function StatementSection() {
             }}
           >
             Somos um laboratório onde{' '}
-            <span style={{ color: '#B7AB98' }}>criatividade humana e super inteligência </span>
+            <span style={{ color: '#B7AB98' }}>criatividade humana e tecnologia </span>
             se encontram para transformar ideias em realidade.
           </h2>
         </motion.div>
