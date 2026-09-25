@@ -102,8 +102,8 @@ export default function HeroSection() {
 
           // Cinematic Deep Indigo & Violet Palette
           vec3 deepSpace = vec3(0.01, 0.01, 0.02);
-          vec3 darkViolet = vec3(0.12, 0.04, 0.25);
-          vec3 plasmaBlue = vec3(0.2, 0.5, 0.9);
+          vec3 darkViolet = vec3(0.52, 0.20, 0.15);
+          vec3 plasmaBlue = vec3(0.98, 0.41, 0.32);
           vec3 coreWhite = vec3(0.9, 0.95, 1.0);
 
           vec3 color = mix(deepSpace, darkViolet, intensity * 1.5);
