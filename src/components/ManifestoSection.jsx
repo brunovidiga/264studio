@@ -11,7 +11,7 @@ export default function ManifestoSection() {
         <div className="relative whitespace-nowrap">
           MARCAS FORTES
           <svg
-            className="absolute left-[15%] -bottom-[10%] w-[35%] h-auto text-white/95 drop-shadow-md z-20"
+            className="absolute left-[15%] -bottom-[10%] w-[35%] h-auto text-[#b4ac98] drop-shadow-md z-20"
             viewBox="0 0 100 20"
             fill="none"
             stroke="currentColor"
@@ -24,7 +24,7 @@ export default function ManifestoSection() {
 
         <div className="relative whitespace-nowrap mt-2">
           <svg
-            className="absolute -left-[12%] bottom-[10%] w-[12%] h-auto text-white/95 drop-shadow-md z-20"
+            className="absolute -left-[12%] bottom-[10%] w-[12%] h-auto text-[#b4ac98] drop-shadow-md z-20"
             viewBox="0 0 100 100"
             fill="none"
             stroke="currentColor"
@@ -35,7 +35,7 @@ export default function ManifestoSection() {
           </svg>
           NÃO ESPERAM
           <svg
-            className="absolute -right-[15%] top-[0%] w-[15%] h-auto text-white/95 drop-shadow-md z-20"
+            className="absolute -right-[15%] top-[0%] w-[15%] h-auto text-[#b4ac98] drop-shadow-md z-20"
             viewBox="0 0 100 100"
             fill="none"
             stroke="currentColor"
@@ -50,7 +50,7 @@ export default function ManifestoSection() {
         <div className="relative whitespace-nowrap mt-2">
           OPORTUNIDADES.
           <span
-            className="z-20 whitespace-nowrap font-medium text-white tracking-tight absolute left-[30%] top-[-42%] -rotate-6 text-[clamp(1.5rem,4vw,3.5rem)]"
+            className="z-20 whitespace-nowrap font-medium text-[#b4ac98] tracking-tight absolute left-[30%] top-[-42%] -rotate-6 text-[clamp(1.5rem,4vw,3.5rem)]"
             style={{ fontFamily: "'Caveat', cursive", filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))', textShadow: 'none' }}
           >
             ESTRATÉGIA
@@ -59,14 +59,14 @@ export default function ManifestoSection() {
 
         <div className="relative whitespace-nowrap mt-2">
           <span
-            className="absolute left-[-16%] top-[10%] text-white text-[clamp(1.5rem,4vw,3.5rem)] font-medium italic tracking-tight -rotate-12 z-20"
+            className="absolute left-[-16%] top-[10%] text-[#b4ac98] text-[clamp(1.5rem,4vw,3.5rem)] font-medium italic tracking-tight -rotate-12 z-20"
             style={{ fontFamily: "'Caveat', cursive", filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))', textShadow: 'none' }}
           >
             CRIATIVIDADE
           </span>
           CRIAM!
           <span
-            className="absolute left-[108%] top-[30%] text-white text-[clamp(1.5rem,4vw,3.5rem)] font-medium italic tracking-tight -rotate-3 z-20 whitespace-nowrap"
+            className="absolute left-[108%] top-[30%] text-[#b4ac98] text-[clamp(1.5rem,4vw,3.5rem)] font-medium italic tracking-tight -rotate-3 z-20 whitespace-nowrap"
             style={{ fontFamily: "'Caveat', cursive", filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))', textShadow: 'none' }}
           >
             RESULTADOS
