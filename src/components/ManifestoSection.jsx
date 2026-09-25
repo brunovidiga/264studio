@@ -1,12 +1,12 @@
 export default function ManifestoSection() {
   return (
     <section className="relative w-full py-16 md:py-24 px-4 flex justify-center items-center bg-black overflow-hidden">
-      <div className="absolute left-0 top-0 w-[40%] h-full bg-[#cf6701]/15 blur-[150px] pointer-events-none rounded-r-full -translate-x-1/2"></div>
-      <div className="absolute right-0 top-0 w-[40%] h-full bg-[#cf6701]/15 blur-[150px] pointer-events-none rounded-l-full translate-x-1/2"></div>
+      <div className="absolute left-0 top-0 w-[40%] h-full bg-[#fa6851]/15 blur-[150px] pointer-events-none rounded-r-full -translate-x-1/2"></div>
+      <div className="absolute right-0 top-0 w-[40%] h-full bg-[#fa6851]/15 blur-[150px] pointer-events-none rounded-l-full translate-x-1/2"></div>
 
       <div
-        className="relative z-10 flex flex-col items-center justify-center uppercase text-[#cf6701] leading-[0.85] text-[clamp(4rem,12vw,12rem)] tracking-tight text-center select-none"
-        style={{ fontFamily: "'Anton', sans-serif", textShadow: '0 0 40px rgba(207,103,1,0.5), 0 0 80px rgba(207,103,1,0.2)' }}
+        className="relative z-10 flex flex-col items-center justify-center uppercase text-[#fa6851] leading-[0.85] text-[clamp(4rem,12vw,12rem)] tracking-tight text-center select-none"
+        style={{ fontFamily: "'Anton', sans-serif", textShadow: '0 0 40px rgba(250,104,81,0.5), 0 0 80px rgba(250,104,81,0.2)' }}
       >
         <div className="relative whitespace-nowrap">
           MARCAS FORTES
