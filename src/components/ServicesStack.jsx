@@ -27,7 +27,7 @@ export default function ServicesStack() {
         {items.map((item) => (
           <li key={item.label} className="group/item relative w-full text-center flex items-center justify-center py-2 md:py-1">
             <span
-              className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.85] uppercase tracking-tighter text-[#b7ab98] md:text-zinc-700 transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#cf6701] cursor-pointer inline-block z-20 relative will-change-auto"
+              className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.85] uppercase tracking-tighter text-[#b7ab98] md:text-zinc-700 transition-all duration-500 ease-out md:group-hover/list:opacity-20 md:group-hover/item:!opacity-100 md:group-hover/item:!text-[#fa6851] cursor-pointer inline-block z-20 relative will-change-auto"
               style={{ fontFamily: "'Anton', sans-serif" }}
             >
               {item.label}
